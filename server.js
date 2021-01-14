@@ -3,6 +3,9 @@ const hbs = require('express-handlebars')
 
 const server = express()
 
+const fs = require('fs')
+const router = require('./routes')
+
 // Server configuration
 server.use(express.static('public'))
 server.use(express.urlencoded({ extended: false }))
