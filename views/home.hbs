@@ -1,7 +1,11 @@
-<div class="container">
-  {{#each puppies}}
-  <div class="puppy-list">
-    <a href="/puppies/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
-  </div>
-  {{/each}}
-</div>
+<p>Enter name here:</p>
+
+<form class="form" action="./questions" method="post">
+  <label for="name" class="form-item">
+    Name:
+    <input type="text" name="name" value="name">
+  </label>
+  <input type="submit" name="" value="Submit">
+</form>
+
+<p>Disclaimer: Proceed at your own risk!</p>
