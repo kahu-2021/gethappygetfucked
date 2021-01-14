@@ -1,53 +1,44 @@
 {
-  "puppies": [
+  "compliments": [
     {
       "id": 1,
-      "name": "Fido",
-      "owner": "Fred",
-      "image": "/images/puppy1.jpg",
-      "breed": "Labrador"
+      "comp": "You are one of a kind."
     },
     {
       "id": 2,
-      "name": "Coco",
-      "owner": "Chloe",
-      "image": "/images/puppy2.jpg",
-      "breed": "Labrador"
+      "comp": "Thanks for being you!"
     },
     {
       "id": 3,
-      "name": "Magnum",
-      "owner": "Michael",
-      "image": "/images/puppy3.jpg",
-      "breed": "Rottweiler"
+      "comp": "You have such a great heart."
     },
     {
       "id": 4,
-      "name": "Sadie",
-      "owner": "Sam",
-      "image": "/images/puppy4.jpg",
-      "breed": "Labrador"
+      "comp": "You are beautiful inside and out!"
     },
     {
       "id": 5,
-      "name": "Murphy",
-      "owner": "Matthew",
-      "image": "/images/puppy5.jpg",
-      "breed": "Pug"
+      "comp": "You have accomplished so many incredible things!"
     },
     {
       "id": 6,
-      "name": "Bella",
-      "owner": "Brianna",
-      "image": "/images/puppy6.jpg",
-      "breed": "Labrador"
+      "comp": "You spark so much joy in people's lives."
     },
     {
       "id": 7,
-      "name": "Rocky",
-      "owner": "Ricky",
-      "image": "/images/puppy7.jpg",
-      "breed": "Labrador"
+      "comp": "Never stop being you!"
+    }
+    {
+      "id": 8,
+      "comp": "You are a ray of sunshine!"
+    }
+    {
+      "id": 9,
+      "comp": "You light up the room!"
+    }
+    {
+      "id": 10,
+      "comp": "You are a treasure."
     }
   ]
 }
