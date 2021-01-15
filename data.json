@@ -76,12 +76,14 @@
     },
     {
       "id": 9,
-      "comp":"You're always lost in thought. It must be unfamiliar territory."
+      "comp": "You're always lost in thought. It must be unfamiliar territory."
     },
     {
       "id": 10,
       "comp": "You suck."
     }
   ],
-  "name" : "name"
+  "name": {
+    "name": "fh"
+  }
 }

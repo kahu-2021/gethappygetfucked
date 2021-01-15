@@ -5,6 +5,7 @@ const fs = require('fs')
 const data = require('./data.json')
 let comp = data.compliments
 let insults = data.insults
+let name = data.name
 
 // Server configuration
 server.use(express.static('public'))
@@ -21,36 +22,75 @@ server.get('/', (req, res) => {
 })
 
 server.post('/questions', (req, res) => {
-  let name = {name : req.body.name}
-  res.render('./questions', name)
+  console.log('POST /questions')
+  let n = {name : req.body.name}
+  data.name = n
+  fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err) => {
+    if (err){
+      throw err
+    }
+    console.log("name changed")
+  })
+  res.render('./questions', n)
 })
 
 server.get('/questions', (req, res) => {
+  console.log('GET /questions')
+
   res.send("questions")
 })
 
 server.post('/compliment', (req, res) => {
-  let pageData = {
-    compliment : comp[Math.floor(Math.random()*comp.length)],
-    name : data
-  }
-  res.render('./compliment', pageData)
+  console.log('POST /compliment')
+  let newData = {}
+  fs.readFile('./data.json', (err, d) => {
+    if (err){
+      throw err
+    }else{
+      newData = JSON.parse(d)
+    }
+    let pageData = {
+      compliment : comp[Math.floor(Math.random()*comp.length)],
+      name : newData.name
+    }
+    console.log(pageData.name)
+    res.render('./compliment', pageData)
+  })
 })
 
 server.get('/compliment', (req, res) => {
+  console.log('GET /compliment')
+
   let pageData = {
     compliment : comp[Math.floor(Math.random()*comp.length)],
-    name : data
+    name : name
   }
   res.render('./compliment', pageData)
 })
 
 server.get('/insult', (req, res) => {
-  res.render('./insult', insults[Math.floor(Math.random()*insults.length)])
+  let pageData = {
+    insult : insults[Math.floor(Math.random()*insults.length)],
+    name : name
+  }
+  res.render('./insult', pageData)
 })
 
 server.post('/insult', (req, res) => {
-  res.render('./insult', insults[Math.floor(Math.random()*insults.length)])
+  let newData = {}
+  fs.readFile('./data.json', (err, d) => {
+    if (err){
+      throw err
+    }else{
+      newData = JSON.parse(d)
+    }
+    let pageData = {
+      insult : insults[Math.floor(Math.random()*comp.length)],
+      name : newData.name
+    }
+    console.log(pageData.name)
+    res.render('./insult', pageData)
+  })
 })
 
 module.exports = server
