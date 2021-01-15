@@ -1,10 +1,10 @@
 const express = require('express')
 const hbs = require('express-handlebars')
-
 const server = express()
-
 const fs = require('fs')
-//const router = require('./routes')
+const data = require('./data.json')
+let comp = data.compliments
+let insults = data.insults
 
 // Server configuration
 server.use(express.static('public'))
@@ -23,7 +23,6 @@ server.get('/', (req, res) => {
 server.post('/questions', (req, res) => {
   let name = {name : req.body.name}
   res.render('./questions', name)
-  //res.send(name)
 })
 
 server.get('/questions', (req, res) => {
@@ -31,11 +30,19 @@ server.get('/questions', (req, res) => {
 })
 
 server.post('/compliment', (req, res) => {
-  res.send("hi you look great")
+  res.send(comp[Math.floor(Math.random()*comp.length)].comp)
+})
+
+server.get('/compliment', (req, res) => {
+  res.send(comp[Math.floor(Math.random()*comp.length)].comp)
+})
+
+server.get('/insult', (req, res) => {
+  res.send(insults[Math.floor(Math.random()*insults.length)].comp)
 })
 
 server.post('/insult', (req, res) => {
-  res.send("insult!")
+  res.send(insults[Math.floor(Math.random()*insults.length)].comp)
 })
 
 

@@ -27,15 +27,15 @@
     {
       "id": 7,
       "comp": "Never stop being you!"
-    }
+    },
     {
       "id": 8,
       "comp": "You are a ray of sunshine!"
-    }
+    },
     {
       "id": 9,
       "comp": "You light up the room!"
-    }
+    },
     {
       "id": 10,
       "comp": "You are a treasure."
@@ -44,8 +44,7 @@
   "insults": [
     {
       "id": 1,
-      "comp": "Your face makes onions cry.
-"
+      "comp": "Your face makes onions cry."
     },
     {
       "id": 2,
@@ -53,39 +52,32 @@
     },
     {
       "id": 3,
-      "comp": "You're a grey sprinkle on a rainbow cupcake.
-"
+      "comp": "You're a grey sprinkle on a rainbow cupcake."
     },
     {
       "id": 4,
-      "comp": "Light travels faster than sound which is why you seemed bright until you spoke.
-"
+      "comp": "Light travels faster than sound which is why you seemed bright until you spoke."
     },
     {
       "id": 5,
-      "comp": "I'll never forget the first time we met. But I'll never stop trying.
-"
+      "comp": "I'll never forget the first time we met. But I'll never stop trying."
     },
     {
       "id": 6,
-      "comp": "Hold still. I'm trying to imagine you with personality.
-"
+      "comp": "Hold still. I'm trying to imagine you with personality"
     },
     {
       "id": 7,
-      "comp": "You are so full of shit, the toilet's jealous. -Jinx Monsoon, RuPaul's Drag Race
-"
-    }
+      "comp": "You are so full of shit, the toilet's jealous. -Jinx Monsoon, RuPaul's Drag Race"
+    },
     {
       "id": 8,
-      "comp": "Keep talking, someday you'll say something intelligent.
-"
-    }
+      "comp": "Keep talking, someday you'll say something intelligent."
+    },
     {
       "id": 9,
-      "comp":"You're always lost in thought. It must be unfamiliar territory.
-"
-    }
+      "comp":"You're always lost in thought. It must be unfamiliar territory."
+    },
     {
       "id": 10,
       "comp": ""
