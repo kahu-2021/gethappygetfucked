@@ -30,23 +30,27 @@ server.get('/questions', (req, res) => {
 })
 
 server.post('/compliment', (req, res) => {
-  res.send(comp[Math.floor(Math.random()*comp.length)].comp)
+  let pageData = {
+    compliment : comp[Math.floor(Math.random()*comp.length)],
+    name : data
+  }
+  res.render('./compliment', pageData)
 })
 
 server.get('/compliment', (req, res) => {
-  res.send(comp[Math.floor(Math.random()*comp.length)].comp)
+  let pageData = {
+    compliment : comp[Math.floor(Math.random()*comp.length)],
+    name : data
+  }
+  res.render('./compliment', pageData)
 })
 
 server.get('/insult', (req, res) => {
-  res.send(insults[Math.floor(Math.random()*insults.length)].comp)
+  res.render('./insult', insults[Math.floor(Math.random()*insults.length)])
 })
 
 server.post('/insult', (req, res) => {
-  res.send(insults[Math.floor(Math.random()*insults.length)].comp)
+  res.render('./insult', insults[Math.floor(Math.random()*insults.length)])
 })
-
-
-
-
 
 module.exports = server

@@ -80,7 +80,8 @@
     },
     {
       "id": 10,
-      "comp": ""
+      "comp": "You suck."
     }
-  ]
+  ],
+  "name" : "name"
 }
